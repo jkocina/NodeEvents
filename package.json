@@ -1,0 +1,24 @@
+{
+  "name": "nodeevents",
+  "version": "1.0.0",
+  "description": "Nodes of Events",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git+https://github.com/jkocina/NodeEvents.git",
+  "author": "Jacob Kocina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jkocina/NodeEvents/issues"
+  },
+  "homepage": "https://github.com/jkocina/NodeEvents#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "express": "^4.17.1",
+    "jquery": "^3.4.1",
+    "popper": "^1.0.1"
+  },
+  "devDependencies": {
+  }
+}
