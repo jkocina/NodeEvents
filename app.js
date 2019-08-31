@@ -3,13 +3,18 @@ const path = require('path');
 const bodyParser = require('body-parser');
 
 const app = express();
-
+//middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extend: false}));
 
 // set static path (middleware)
 app.use(express.static(path.join(__dirname, 'public')));
 
+//Setting up the templating engine
+app.set('view engine', 'ejs');
+
+
+//Serving API information
 app.get('/users', (req,res) => {
   let users = [
     {
