@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
+const routes = require('./routes');
 
 const app = express();
 //middleware
@@ -13,6 +14,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Setting up the templating engine
 app.set('view engine', 'ejs');
 
+//Handling the pages
+app.use('/', routes);
 
 //Serving API information
 app.get('/users', (req,res) => {
@@ -40,21 +43,25 @@ app.get('/users', (req,res) => {
   res.json(users);
 });
 
-//Download Document
+//Download Document example
 app.get('/download', (req,res) => {
   res.download(path.join(__dirname, '/downloads/LegalityofusingGoogleAnalytics.docx'))
 });
 
-//Redirectors
-app.get('/about', (req,res) => {
-  res.redirect('/about.html');
+/*redirectors
+router.get('/about', (req,res) => {
+  res.render('about');
 });
 
-app.get('/index', (req,res) => {
-  res.redirect('/index.html');
+router.get('/', (req,res) => {
+  res.render('index')
 });
+router.get('/index', (req,res) => {
+  res.render('index');
+});
+*/
 
-//Post handler
+//Post handler example
 app.post('/subscribe', (req,res) => {
   let name = req.body.name;
   let email = req.body.email;
@@ -63,7 +70,7 @@ app.post('/subscribe', (req,res) => {
   res.redirect('/index.html');
 });
 
-//Looks kinda like a magic method in PHP
+//Looks kinda like a magic method in PHP, dyanmic name handling
 app.get('/users/:name', (req, res) => {
   let user = req.params.name;
   res.send('<h1>' + user + '</h1>');
