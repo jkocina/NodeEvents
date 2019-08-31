@@ -6,7 +6,7 @@ const app = express();
 // set static path (middleware)
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+/*
 app.get('/', function(req, res) {
   res.send('Hello World');
 });
@@ -14,7 +14,8 @@ app.get('/', function(req, res) {
 app.get('/about', (req, res) => {
   res.send('<h1>About</h1>');
 });
-
+*/
+//Looks kinda like a magic method in PHP
 app.get('/users/:name', (req, res) => {
   let user = req.params.name;
   res.send('<h1>' + user + '</h1>');
