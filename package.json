@@ -14,11 +14,11 @@
   },
   "homepage": "https://github.com/jkocina/NodeEvents#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "bootstrap": "^4.3.1",
     "express": "^4.17.1",
     "jquery": "^3.4.1",
     "popper": "^1.0.1"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }

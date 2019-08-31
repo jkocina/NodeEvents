@@ -1,7 +1,11 @@
 const express = require('express');
 const path = require('path');
+const bodyParser = require('body-parser');
 
 const app = express();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extend: false}));
 
 // set static path (middleware)
 app.use(express.static(path.join(__dirname, 'public')));
@@ -32,18 +36,20 @@ app.get('/users', (req,res) => {
 
 });
 
-app.get('/download', (res,req) => {
-  res.download(path.join(__dirname, '/download/LegalityofusingGoogleAnalytics.docx'))
-})
-/*
-app.get('/', function(req, res) {
-  res.send('Hello World');
+app.get('/download', (req,res) => {
+  res.download(path.join(__dirname, '/downloads/LegalityofusingGoogleAnalytics.docx'))
 });
 
-app.get('/about', (req, res) => {
-  res.send('<h1>About</h1>');
+app.get('/about', (req,res) => {
+  res.redirect('/about.html');
 });
-*/
+
+app.post('/subscribe', (req,res) => {
+  let name = req.body.name;
+  let email = req.body.email;
+
+  console.log(name+' has subscribed with' +email);
+});
 
 //Looks kinda like a magic method in PHP
 app.get('/users/:name', (req, res) => {
