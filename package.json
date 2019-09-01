@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-    "start": "npm start app"
+    "start": "node start app"
   },
   "repository": "git+https://github.com/jkocina/NodeEvents.git",
   "author": "Jacob Kocina",
