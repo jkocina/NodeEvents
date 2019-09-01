@@ -4,8 +4,8 @@
   "description": "Nodes of Events",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-    "start": "node start app"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": "git+https://github.com/jkocina/NodeEvents.git",
   "author": "Jacob Kocina",
