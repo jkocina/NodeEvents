@@ -26,6 +26,7 @@
     "popper": "^1.0.1"
   },
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.2.0"
   }
 }
