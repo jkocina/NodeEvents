@@ -4,7 +4,7 @@ $(document).ready(function() {
 
     let calendar = new FullCalendar.Calendar(calendarEl, {
 
-        plugins: ['dayGrid']
+        plugins: ['dayGrid', 'list']
 
     });
 
