@@ -2,13 +2,17 @@
 <html lang="en" dir="ltr">
 <head>
   <% include ./partials/head.ejs %>
+  <link href='fullcalendar/core/main.css' rel='stylesheet' />
+  <link href='fullcalendar/daygrid/main.css' rel='stylesheet' />
+
+  <script src='fullcalendar/core/main.js'></script>
+  <script src='fullcalendar/daygrid/main.js'></script>
 </head>
   <body>
 
     <% include ./partials/nav.ejs %>
     <div class="container">
-      <h1>Welcome, this is the home page</h1>
-      <p>This is the home page</p>
+      <div id="calendar"></div>
     </div>
   </body>
 </html>
