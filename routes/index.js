@@ -13,7 +13,7 @@ router.get('/about', (req, res) => {
 
 router.get('/events', (req, res) => {
   console.log('Request for contact page recieved');
-  res.render('contact');
+  res.render('events');
 });
 
 module.exports = router;

@@ -1,8 +1,8 @@
 const {src, dest, parallel } = require('gulp');
 
-function openCal() {
+function fullCal() {
     return src(['node_modules/@fullcalendar/**/*'])
-    .pipe(dest('views/opencalendar'));
+    .pipe(dest('views/fullcalendar'));
 }
 
 function bootStrap()  {
@@ -17,6 +17,6 @@ function jQuery()  {
 }
 
 
-exports.openCal = openCal;
+exports.fullCal = fullCal;
 exports.bootStrap = bootStrap;
 exports.jQuery = jQuery;
