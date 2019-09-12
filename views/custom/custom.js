@@ -9,4 +9,12 @@ $(document).ready(function() {
     });
 
     calendar.render();
+
+    $('#calendar').fullCalendar({
+      dayClick: function()  {
+        //create a pop-up of event data
+        alert("I'm soo clicked right now");
+
+      }
+    })
 });
