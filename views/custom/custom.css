@@ -1,3 +1,7 @@
 .fullCal  {
   margin-top: 100px;
 }
+
+.nav-link  {
+  display: inline;
+}

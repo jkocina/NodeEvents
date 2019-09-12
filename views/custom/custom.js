@@ -1,10 +1,15 @@
+//import { Calendar } from '/fullcalendar/core';
+//import interactionPlugin from '../fullcalendar/interaction';
+//, { Draggable } from '/fullcalendar/interaction';
+
 $(document).ready(function() {
 
-    let calendarEl = document.getElementById('calendar');
+    let draggableEl = $('#myDraggable');
+    let calendarEl = document.getElementById("calendar");
 
     let calendar = new FullCalendar.Calendar(calendarEl, {
 
-        plugins: ['dayGrid', 'list']
+        plugins: ['dayGrid']
 
     });
 
